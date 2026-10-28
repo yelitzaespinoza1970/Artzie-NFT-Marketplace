@@ -38,7 +38,7 @@ The interface features a modern NFT marketplace-inspired layout, a featured artw
 
 ## 📷 Project Preview
 
-*A screenshot of the completed landing page will be added here.*
+![Artzie NFT Marketplace Screenshot](127.0.0.1_5500_index.html%20%2813%29.png)
 
 ## 📂 Project Status
 
