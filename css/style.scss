@@ -1,0 +1,522 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*Proyecto 5 NFT Marketplace*/
+
+$gris-bg: #2e2f38;
+$red: #fa504d;
+$gris-light: #8e8e8e;
+$font-title: "Belgrano", serif;
+$font-text: "Poppins", sans-serif;
+
+@mixin button() {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: $red;
+  color: white;
+  text-decoration: none;
+  &:hover {
+    background-color: darken($red, 0.2);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: clip;
+  position: relative;
+  z-index: 0;
+  font-family: $font-text;
+  font-size: 16px;
+  min-height: 100vh;
+  &::before {
+    content: "";
+    right: 0;
+    width: 42%;
+    background-color: #2e2f38;
+    position: fixed;
+    z-index: -1;
+    min-height: 100%;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 130px; /* ajusta según tu diseño */
+    right: -5%; /* lo mueve hacia adentro del panel */
+    width: 250px; /* tamaño del logo */
+    height: 500px; /* ajusta según tu SVG */
+    background-image: url("../img/artzie.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    z-index: -1; /* detrás del contenido */
+  }
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+header {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.principal_nav {
+  margin-left: 130px;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 46px;
+  }
+  a {
+    color: $gris-bg;
+    font-size: 300;
+  }
+}
+
+.login {
+  margin-left: auto;
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+  }
+  a {
+    color: white;
+    font-weight: 300;
+  }
+  .btn {
+    @include button();
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.hero {
+  grid-column: 1 / span 1;
+  padding-top: 50px;
+  h1 {
+    font-family: $font-title;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 65px;
+    color: $gris-bg;
+    padding-right: 40px;
+    margin-bottom: 30px;
+    &::before {
+      content: "";
+      display: block;
+      width: 500px;
+      height: 70px; // suficiente para el SVG
+      background-image: url("../img/nft-lazo.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-bottom: -60px; // separa la línea del texto
+      margin-left: 100px; // alineado al inicio del h1
+      transform: none; // no moverlo
+    }
+  }
+  &_subtitle {
+    color: $gris-light;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    position: relative;
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      right: auto;
+      top: 22px;
+      right: 0;
+      width: 70px;
+      height: 5px;
+      background-color: $red;
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    a.btn {
+      @include button();
+      padding: 12px 60px;
+    }
+    a:last-child {
+      font-weight: 300;
+      color: $gris-bg;
+    }
+  }
+}
+
+.featured {
+  grid-column: 1 / span 1;
+  padding-right: 40px;
+
+  &_title {
+    font-family: $font-title;
+    margin-bottom: 20px;
+  }
+
+  &_imgs {
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 49%;
+      border: 1px solid $gris-light;
+      padding: 4px;
+    }
+  }
+}
+
+.nft {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &_imagencontainer {
+    max-width: 100%;
+  }
+
+  &_data {
+    background-color: white;
+    margin-top: -30px;
+    padding: 16px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+
+  &_owner {
+    display: flex;
+    &-data {
+      margin-left: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+
+  &_username {
+    font-weight: 300;
+    color: $gris-light;
+  }
+
+  &_name {
+    font-weight: bold;
+  }
+
+  &_price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &_current {
+      color: $gris-light;
+    }
+    &_number {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    a.btn {
+      @include button();
+      padding: 10px 40px;
+      &:last-child {
+        background-color: transparent;
+        color: $red;
+      }
+    }
+  }
+  &_numbers {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+  &_number {
+    font-size: 24px;
+    color: $red;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,487 @@
+@charset "UTF-8";
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*Proyecto 5 NFT Marketplace*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: clip;
+  position: relative;
+  z-index: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  right: 0;
+  width: 42%;
+  background-color: #2e2f38;
+  position: fixed;
+  z-index: -1;
+  min-height: 100%;
+  top: 0;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 130px; /* ajusta según tu diseño */
+  right: -5%; /* lo mueve hacia adentro del panel */
+  width: 250px; /* tamaño del logo */
+  height: 500px; /* ajusta según tu SVG */
+  background-image: url("../img/artzie.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
+  z-index: -1; /* detrás del contenido */
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+header a {
+  text-decoration: none;
+}
+
+.principal_nav {
+  margin-left: 130px;
+}
+.principal_nav ul {
+  list-style: none;
+  display: flex;
+  gap: 46px;
+}
+.principal_nav a {
+  color: #2e2f38;
+  font-size: 300;
+}
+
+.login {
+  margin-left: auto;
+}
+.login ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+.login a {
+  color: white;
+  font-weight: 300;
+}
+.login .btn {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: #fa504d;
+  color: white;
+  text-decoration: none;
+}
+.login .btn:hover {
+  background-color: rgb(249.9721311475, 79.0245901639, 76.0078688525);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.hero {
+  grid-column: 1/span 1;
+  padding-top: 50px;
+}
+.hero h1 {
+  font-family: "Belgrano", serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 65px;
+  color: #2e2f38;
+  padding-right: 40px;
+  margin-bottom: 30px;
+}
+.hero h1::before {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 70px;
+  background-image: url("../img/nft-lazo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: -60px;
+  margin-left: 100px;
+  transform: none;
+}
+.hero_subtitle {
+  color: #8e8e8e;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  position: relative;
+}
+.hero_subtitle::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 22px;
+  right: 0;
+  width: 70px;
+  height: 5px;
+  background-color: #fa504d;
+}
+.hero_buttons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.hero_buttons a.btn {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: #fa504d;
+  color: white;
+  text-decoration: none;
+}
+.hero_buttons a.btn:hover {
+  background-color: rgb(249.9721311475, 79.0245901639, 76.0078688525);
+}
+.hero_buttons a.btn {
+  padding: 12px 60px;
+}
+.hero_buttons a:last-child {
+  font-weight: 300;
+  color: #2e2f38;
+}
+
+.featured {
+  grid-column: 1/span 1;
+  padding-right: 40px;
+}
+.featured_title {
+  font-family: "Belgrano", serif;
+  margin-bottom: 20px;
+}
+.featured_imgs {
+  display: flex;
+  justify-content: space-between;
+}
+.featured_imgs img {
+  width: 49%;
+  border: 1px solid #8e8e8e;
+  padding: 4px;
+}
+
+.nft {
+  grid-column: 2/span 1;
+  grid-row: 1/span 2;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.nft_imagencontainer {
+  max-width: 100%;
+}
+.nft_data {
+  background-color: white;
+  margin-top: -30px;
+  padding: 16px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.nft_header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+.nft_owner {
+  display: flex;
+}
+.nft_owner-data {
+  margin-left: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.nft_username {
+  font-weight: 300;
+  color: #8e8e8e;
+}
+.nft_name {
+  font-weight: bold;
+}
+.nft_price {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.nft_price_current {
+  color: #8e8e8e;
+}
+.nft_price_number {
+  font-weight: bold;
+  font-size: 20px;
+}
+.nft_buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.nft_buttons a.btn {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: #fa504d;
+  color: white;
+  text-decoration: none;
+}
+.nft_buttons a.btn:hover {
+  background-color: rgb(249.9721311475, 79.0245901639, 76.0078688525);
+}
+.nft_buttons a.btn {
+  padding: 10px 40px;
+}
+.nft_buttons a.btn:last-child {
+  background-color: transparent;
+  color: #fa504d;
+}
+.nft_numbers {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+}
+.nft_number {
+  font-size: 24px;
+  color: #fa504d;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
